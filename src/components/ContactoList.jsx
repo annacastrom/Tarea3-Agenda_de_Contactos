@@ -1,8 +1,19 @@
 import React from 'react'
+import ContactoCard from './ContactoCard'
 
-function ContactoList() {
+function ContactoList({contactos, onEliminar}) {
   return (
-    <div>ContactoList</div>
+    <div>
+        {contactos.map((contacto, index) => (
+        <ContactoCard
+            key={index}
+            nombre={contacto.nombre}
+            telefono={contacto.telefono}
+            categoria={contacto.categoria}
+            onEliminar={() => onEliminar(index)}
+            />
+        ))}
+    </div>
   )
 }
 
