@@ -18,17 +18,47 @@ function App() {
     setcontactos(contactosActualizados); 
   }
 
-  const contactosFiltroados = filtro === 'Todos' ? contactos : contactos.filter(contacto => contacto.categoria === filtro);
+  const contactosFiltrados = filtro === 'Todos' ? contactos : contactos.filter(contacto => contacto.categoria === filtro);
 
   return (
-    <div>
+    <div className="app-contenedor">
       <ContactoForm
       onAgregar={onAgregar}
       numero={contactos.length}
       />
 
+    <div className="filtro-contenedor">
+      <button
+        className={filtro === 'Todos' ? 'filtro-boton activo' : 'filtro-boton'}
+        onClick={() => setFiltro('Todos')}
+      >
+        Todos
+      </button>
+
+      <button
+        className={filtro === 'Trabajo' ? 'filtro-boton activo' : 'filtro-boton'}
+        onClick={() => setFiltro('Trabajo')}
+      >
+        Trabajo
+      </button>
+
+      <button
+        className={filtro === 'Familia' ? 'filtro-boton activo' : 'filtro-boton'}
+        onClick={() => setFiltro('Familia')}
+      >
+        Familia
+      </button>
+
+      <button
+        className={filtro === 'Amigo' ? 'filtro-boton activo' : 'filtro-boton'}
+        onClick={() => setFiltro('Amigo')}
+      >
+        Amigo
+      </button>
+    </div>
+
       <ContactoList
-      contactos={contactos}
+      contactos={contactosFiltrados}
       onEliminar={onEliminar}
       />
 
