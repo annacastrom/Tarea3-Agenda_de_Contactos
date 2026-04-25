@@ -62,6 +62,10 @@ function App() {
       onEliminar={onEliminar}
       />
 
+      <div className='app-contactos-mostrados'>
+        <p className='app-contactos-mostrados-texto'>mostrando <span className='app-contactos-mostrados-numero'>{contactosFiltrados.length}</span> de <span className='app-contactos-totales-numero'>{contactos.length}</span> contactos</p>
+      </div>
+
     </div>
   );
 }

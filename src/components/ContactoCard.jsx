@@ -1,4 +1,5 @@
 import React from 'react'
+import './ContactoCard.css'
 
 function ContactoCard({nombre, telefono, categoria, onEliminar}) {
 

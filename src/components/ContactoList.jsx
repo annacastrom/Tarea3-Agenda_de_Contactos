@@ -1,5 +1,6 @@
 import React from 'react'
 import ContactoCard from './ContactoCard'
+import './ContactoList.css'
 
 function ContactoList({contactos, onEliminar}) {
   return (

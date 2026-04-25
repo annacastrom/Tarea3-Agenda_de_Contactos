@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState } from 'react'
+import './ContactoForm.css'
 
 function ContactoForm({onAgregar, numero}) { // Solo recibe número para añadirlo en el subtítulo de contactos guardados
     const [nombre, setNombre] = useState('');
