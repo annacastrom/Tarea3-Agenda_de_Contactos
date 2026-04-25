@@ -5,6 +5,25 @@ function ContactoForm({onAgregar, numero}) { // Solo recibe número para añadir
     const [nombre, setNombre] = useState('');
     const [telefono, setTelefono] = useState('');
     const [categoria, setCategoria] = useState('Trabajo');
+
+    function onAgregarContacto() {
+        if (nombre.trim() === '' || telefono.trim() === '') {
+            return;
+        }
+
+        const nuevoContacto = {
+            nombre: nombre,
+            telefono: telefono,
+            categoria: categoria
+        }
+
+        onAgregar(nuevoContacto);
+
+        setNombre('');
+        setTelefono('');
+        setCategoria('Trabajo');
+
+    }
     
   return (
     <div className='contactoform-contenedor'>
@@ -35,10 +54,9 @@ function ContactoForm({onAgregar, numero}) { // Solo recibe número para añadir
 
         <button 
             className='contactoform-agregar-contacto' 
-            onClick={onAgregar}>
+            onClick={onAgregarContacto}>
             + Agregar contacto
         </button>
-
     </div>
   )
 }
