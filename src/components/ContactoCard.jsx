@@ -1,14 +1,19 @@
 import React from 'react'
 import './ContactoCard.css'
 
-function ContactoCard({nombre, telefono, categoria, onEliminar}) {
+function ContactoCard({nombre, telefono, categoria, onEliminar, color}) {
 
     const iniciales = nombre.split(' ').map(p => p[0]).join('').toUpperCase();
 
   return (
     <div className='contactocard-contenedor'>
-        <div className='tarjeta-avatar'>
-            {iniciales}
+        <div
+        className='tarjeta-avatar'
+        style={{
+            backgroundColor: color.bg,
+            color: color.text
+        }}
+>       {iniciales}
         </div>
 
         <div className='contactocard-info'>

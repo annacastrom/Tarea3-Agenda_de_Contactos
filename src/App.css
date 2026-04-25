@@ -26,10 +26,31 @@
   cursor: pointer;
 }
 
-.filtro-boton.activo {
+.filtro-boton.todos{
   background-color: #4b3fd1;
   color: white;
   border-color: #4b3fd1;
+  font-weight: bold;
+}
+
+.filtro-boton.trabajo{
+  background-color: #173f82;
+  color: white;
+  border-color: #173f82;
+  font-weight: bold;
+}
+
+.filtro-boton.familia{
+  background-color: #145a4b;
+  color: white;
+  border-color: #145a4b;
+  font-weight: bold;
+}
+
+.filtro-boton.amigo{
+  background-color: #921d75;
+  color: white;
+  border-color: #921d75;
   font-weight: bold;
 }
 

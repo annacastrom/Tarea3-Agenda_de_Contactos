@@ -29,28 +29,28 @@ function App() {
 
     <div className="filtro-contenedor">
       <button
-        className={filtro === 'Todos' ? 'filtro-boton activo' : 'filtro-boton'}
+        className={filtro === 'Todos' ? 'filtro-boton todos' : 'filtro-boton'}
         onClick={() => setFiltro('Todos')}
       >
         Todos
       </button>
 
       <button
-        className={filtro === 'Trabajo' ? 'filtro-boton activo' : 'filtro-boton'}
+        className={filtro === 'Trabajo' ? 'filtro-boton trabajo' : 'filtro-boton'}
         onClick={() => setFiltro('Trabajo')}
       >
         Trabajo
       </button>
 
       <button
-        className={filtro === 'Familia' ? 'filtro-boton activo' : 'filtro-boton'}
+        className={filtro === 'Familia' ? 'filtro-boton familia' : 'filtro-boton'}
         onClick={() => setFiltro('Familia')}
       >
         Familia
       </button>
 
       <button
-        className={filtro === 'Amigo' ? 'filtro-boton activo' : 'filtro-boton'}
+        className={filtro === 'Amigo' ? 'filtro-boton amigo' : 'filtro-boton'}
         onClick={() => setFiltro('Amigo')}
       >
         Amigo

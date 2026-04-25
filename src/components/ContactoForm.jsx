@@ -22,7 +22,7 @@ function ContactoForm({onAgregar, numero}) { // Solo recibe número para añadir
 
         setNombre('');
         setTelefono('');
-        setCategoria('Trabajo');
+        setCategoria('');
 
     }
     
