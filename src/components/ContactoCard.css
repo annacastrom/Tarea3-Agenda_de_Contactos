@@ -1,0 +1,69 @@
+.contactocard-contenedor {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 20px 22px;
+  border-bottom: 1px solid #e6e2dc;
+}
+
+.tarjeta-avatar {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  background-color: #eeeefe;
+  color: #332e91;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+.contactocard-info {
+  flex: 1;
+}
+
+.contactocard-nombre {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+.contactocard-telefono {
+  font-size: 17px;
+  color: #555;
+}
+
+.contactocard-categoria {
+  padding: 7px 13px;
+  border-radius: 999px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.trabajo {
+  background-color: #e8f1ff;
+  color: #173f82;
+}
+
+.familia {
+  background-color: #e3f4ee;
+  color: #145a4b;
+}
+
+.amigo {
+  background-color: #efedfb;
+  color: #3d3192;
+}
+
+.contactocard-eliminar {
+  border: none;
+  background: transparent;
+  color: #aaa;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.contactocard-eliminar:hover {
+  color: #666;
+}

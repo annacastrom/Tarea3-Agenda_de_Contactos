@@ -1,0 +1,45 @@
+.app-contenedor {
+  width: 460px;
+  margin: 24px auto;
+  background-color: white;
+  border: 1px solid #d8d5cf;
+  border-radius: 24px;
+  overflow: hidden;
+}
+
+.filtro-contenedor {
+  display: flex;
+  gap: 10px;
+  padding: 16px 22px;
+  border-top: 1px solid #e6e2dc;
+  border-bottom: 1px solid #e6e2dc;
+  background-color: white;
+}
+
+.filtro-boton {
+  padding: 9px 16px;
+  border: 2px solid #d0ccc6;
+  border-radius: 999px;
+  background-color: white;
+  color: #5f5f5f;
+  font-size: 17px;
+  cursor: pointer;
+}
+
+.filtro-boton.activo {
+  background-color: #4b3fd1;
+  color: white;
+  border-color: #4b3fd1;
+  font-weight: bold;
+}
+
+.app-contactos-mostrados {
+  padding: 20px;
+  text-align: center;
+  border-top: 1px solid #e6e2dc;
+}
+
+.app-contactos-mostrados-texto {
+  color: #555;
+  font-size: 17px;
+}

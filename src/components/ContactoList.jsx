@@ -4,7 +4,7 @@ import './ContactoList.css'
 
 function ContactoList({contactos, onEliminar}) {
   return (
-    <div>
+    <div className='contactolist-contenedor'>
         {contactos.map((contacto, index) => (
         <ContactoCard
             key={index}

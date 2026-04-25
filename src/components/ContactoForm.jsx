@@ -5,10 +5,10 @@ import './ContactoForm.css'
 function ContactoForm({onAgregar, numero}) { // Solo recibe número para añadirlo en el subtítulo de contactos guardados
     const [nombre, setNombre] = useState('');
     const [telefono, setTelefono] = useState('');
-    const [categoria, setCategoria] = useState('Trabajo');
+    const [categoria, setCategoria] = useState('');
 
     function onAgregarContacto() {
-        if (nombre.trim() === '' || telefono.trim() === '') {
+        if (nombre.trim() === '' || telefono.trim() === '' || categoria === '') {
             return;
         }
 
@@ -28,9 +28,12 @@ function ContactoForm({onAgregar, numero}) { // Solo recibe número para añadir
     
   return (
     <div className='contactoform-contenedor'>
-        <h2 className='contactoform-titulo'>Mi agenda</h2>
-        <h3 className='contactoform-contactos-guardados'><span className='contactoform-contactos-numero'>{numero}</span> contactos guardados</h3>
-        
+        <div className='contactoform-encabezado'>
+            <h2 className='contactoform-titulo'>Mi agenda</h2>
+            <h3 className='contactoform-contactos-guardados'><span className='contactoform-contactos-numero'>{numero}</span> contactos guardados</h3>
+        </div>
+
+        <div className='contactoform-formulario'>
         <input 
             className='contactoform-nombre'
             type="text"
@@ -48,6 +51,7 @@ function ContactoForm({onAgregar, numero}) { // Solo recibe número para añadir
         </input>
 
         <select className='contactoform-categoria' value={categoria} onChange={(e) => setCategoria(e.target.value)}>
+            <option value="" disabled>Categoría</option>
             <option value="Trabajo">Trabajo</option>
             <option value="Familia">Familia</option>
             <option value="Amigo">Amigo</option>
@@ -58,6 +62,7 @@ function ContactoForm({onAgregar, numero}) { // Solo recibe número para añadir
             onClick={onAgregarContacto}>
             + Agregar contacto
         </button>
+        </div>
     </div>
   )
 }
